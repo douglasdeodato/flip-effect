@@ -1,0 +1,32 @@
+.flip-container {
+    perspective: 1000px;
+    display: inline-block;
+  }
+  
+  .flip-container .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .flip-container:hover .flipper {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-container .front, .flip-container .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .flip-container .back {
+    transform: rotateY(180deg);
+  }
+  
+  /* set the width and height of the flip container and its contents */
+  .flip-container, .front, .back {
+    width: 400px;
+    height: 300px;
+  }
+  
